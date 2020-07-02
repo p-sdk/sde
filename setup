@@ -1,4 +1,9 @@
 #!/bin/sh
 
+heading () {
+    echo "\n\n$1\n"
+}
+
+heading "Upgrading system packages."
 sudo apt update
 sudo apt upgrade -y
