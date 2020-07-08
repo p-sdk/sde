@@ -13,3 +13,7 @@ sudo apt install -y nodejs npm yarnpkg
 
 heading "Installing databases ..."
 sudo apt install -y sqlite3 postgresql
+
+heading "Installing Spacemacs ..."
+sudo apt install -y emacs-nox hunspell silversearcher-ag --no-install-recommends
+git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
