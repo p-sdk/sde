@@ -10,3 +10,6 @@ sudo apt upgrade -y
 
 heading "Installing Node.js ..."
 sudo apt install -y nodejs npm yarnpkg
+
+heading "Installing databases ..."
+sudo apt install -y sqlite3 postgresql
