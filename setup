@@ -12,7 +12,8 @@ heading "Installing Node.js ..."
 sudo apt install -y nodejs npm yarnpkg
 
 heading "Installing databases ..."
-sudo apt install -y sqlite3 postgresql
+sudo apt install -y sqlite3 libsqlite3-dev
+sudo apt install -y postgresql libpq-dev
 
 heading "Installing Spacemacs ..."
 sudo apt install -y emacs-nox git hunspell silversearcher-ag --no-install-recommends
