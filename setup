@@ -29,6 +29,14 @@ if [ ! -f "/etc/apt/sources.list.d/yarn.list" ]; then
 fi
 sudo apt install -y yarn
 
+heading "Installing Erlang and Elixir ..."
+if [ ! -f "/etc/apt/sources.list.d/erlang-solutions.list" ]; then
+  wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb
+  sudo dpkg -i erlang-solutions_2.0_all.deb
+  sudo apt update
+fi
+sudo apt install esl-erlang elixir
+
 heading "Installing Spacemacs ..."
 sudo apt install -y emacs-nox hunspell silversearcher-ag --no-install-recommends
 git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
