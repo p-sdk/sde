@@ -11,6 +11,10 @@ sudo apt upgrade -y
 heading "Installing essential packages ..."
 sudo apt install -y bash-completion build-essential curl git wget
 
+heading "Installing databases ..."
+sudo apt install -y sqlite3 libsqlite3-dev
+sudo apt install -y postgresql libpq-dev
+
 heading "Installing Node.js ..."
 if [ ! -f "/etc/apt/sources.list.d/nodesource.list" ]; then
   curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
@@ -24,10 +28,6 @@ if [ ! -f "/etc/apt/sources.list.d/yarn.list" ]; then
   sudo apt update
 fi
 sudo apt install -y yarn
-
-heading "Installing databases ..."
-sudo apt install -y sqlite3 libsqlite3-dev
-sudo apt install -y postgresql libpq-dev
 
 heading "Installing Spacemacs ..."
 sudo apt install -y emacs-nox hunspell silversearcher-ag --no-install-recommends
