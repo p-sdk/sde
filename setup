@@ -38,6 +38,11 @@ fi
 sudo apt install -y esl-erlang elixir
 mix local.hex --force --if-missing
 
+if ! mix local | grep -q phx.new; then
+  heading "Installing phx_new ..."
+  mix archive.install hex phx_new --force
+fi
+
 heading "Installing Spacemacs ..."
 sudo apt install -y emacs-nox hunspell silversearcher-ag --no-install-recommends
 git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
