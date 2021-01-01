@@ -9,7 +9,7 @@ sudo apt update
 sudo apt upgrade -y
 
 heading "Installing essential packages ..."
-sudo apt install -y bash-completion build-essential curl git wget
+sudo apt install -y bash-completion build-essential curl git inotify-tools wget
 
 heading "Installing databases ..."
 sudo apt install -y sqlite3 libsqlite3-dev
