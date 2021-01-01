@@ -36,6 +36,7 @@ if [ ! -f "/etc/apt/sources.list.d/erlang-solutions.list" ]; then
   sudo apt update
 fi
 sudo apt install -y esl-erlang elixir
+mix local.hex --force --if-missing
 
 heading "Installing Spacemacs ..."
 sudo apt install -y emacs-nox hunspell silversearcher-ag --no-install-recommends
