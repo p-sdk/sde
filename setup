@@ -43,9 +43,14 @@ if ! mix local | grep -q phx.new; then
   mix archive.install hex phx_new --force
 fi
 
-heading "Installing Spacemacs ..."
-sudo apt install -y emacs-nox hunspell silversearcher-ag --no-install-recommends
-git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
+heading "Installing Doom Emacs ..."
+sudo apt install -y emacs-nox fd-find ripgrep
+if [ ! -d "$HOME/.emacs.d" ]; then
+  git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
+fi
+if [ ! -d "$HOME/.doom.d" ]; then
+  ~/.emacs.d/bin/doom install
+fi
 
 heading "To set a password for postgres run the following command:"
 echo "\t" "sudo -u postgres psql -c '\password'"
