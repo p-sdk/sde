@@ -46,3 +46,6 @@ fi
 heading "Installing Spacemacs ..."
 sudo apt install -y emacs-nox hunspell silversearcher-ag --no-install-recommends
 git clone -b develop https://github.com/syl20bnr/spacemacs ~/.emacs.d
+
+heading "To set a password for postgres run the following command:"
+echo "\t" "sudo -u postgres psql -c '\password'"
