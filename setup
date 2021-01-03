@@ -38,6 +38,12 @@ fi
 sudo apt install -y esl-erlang elixir
 mix local.hex --force --if-missing
 
+if [ ! -d "$HOME/.elixir-ls" ]; then
+  heading "Installing ElixirLS ..."
+  wget https://github.com/elixir-lsp/elixir-ls/releases/download/v0.6.2/elixir-ls-1.11.zip
+  unzip elixir-ls-1.11.zip -d ~/.elixir-ls
+fi
+
 if ! mix local | grep -q phx.new; then
   heading "Installing phx_new ..."
   mix archive.install hex phx_new --force
