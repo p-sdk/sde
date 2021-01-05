@@ -50,7 +50,7 @@ if ! mix local | grep -q phx.new; then
 fi
 
 heading "Installing Doom Emacs ..."
-sudo apt install -y emacs-nox fd-find ripgrep
+sudo apt install -y emacs fd-find ripgrep
 if [ ! -d "$HOME/.emacs.d" ]; then
   git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 fi
