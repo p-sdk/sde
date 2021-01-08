@@ -37,6 +37,9 @@ if [ ! -f "/etc/apt/sources.list.d/erlang-solutions.list" ]; then
 fi
 sudo apt install -y esl-erlang elixir
 mix local.hex --force --if-missing
+if [ ! -f "$HOME/.mix/rebar3" ]; then
+  mix local.rebar --force
+fi
 
 if [ ! -d "$HOME/.elixir-ls" ]; then
   heading "Installing ElixirLS ..."
