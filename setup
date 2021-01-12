@@ -33,6 +33,7 @@ heading "Installing Erlang and Elixir ..."
 if [ ! -f "/etc/apt/sources.list.d/erlang-solutions.list" ]; then
   wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb
   sudo dpkg -i erlang-solutions_2.0_all.deb
+  rm erlang-solutions_2.0_all.deb
   sudo apt update
 fi
 sudo apt install -y esl-erlang elixir
@@ -45,6 +46,7 @@ if [ ! -d "$HOME/.elixir-ls" ]; then
   heading "Installing ElixirLS ..."
   wget https://github.com/elixir-lsp/elixir-ls/releases/download/v0.6.2/elixir-ls-1.11.zip
   unzip elixir-ls-1.11.zip -d ~/.elixir-ls
+  rm elixir-ls-1.11.zip
 fi
 
 if ! mix local | grep -q phx.new; then
