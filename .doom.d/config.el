@@ -57,6 +57,7 @@
 
 (after! org
   (add-to-list 'global-hl-line-modes 'org-agenda-mode)
+  (org-edna-mode)
   )
 
 (add-to-list 'exec-path "~/.elixir-ls")
