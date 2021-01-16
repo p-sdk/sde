@@ -55,4 +55,8 @@
 
 (setq doom-localleader-key ",")
 
+(after! org
+  (add-to-list 'global-hl-line-modes 'org-agenda-mode)
+  )
+
 (add-to-list 'exec-path "~/.elixir-ls")
