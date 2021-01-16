@@ -53,4 +53,6 @@
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
 
+(setq doom-localleader-key ",")
+
 (add-to-list 'exec-path "~/.elixir-ls")
