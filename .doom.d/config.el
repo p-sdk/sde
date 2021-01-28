@@ -56,6 +56,7 @@
 (setq doom-localleader-key ",")
 
 (after! org
+  (setq org-agenda-sticky t)
   (add-to-list 'global-hl-line-modes 'org-agenda-mode)
   (org-edna-mode)
 
