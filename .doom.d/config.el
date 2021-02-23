@@ -66,3 +66,9 @@
   )
 
 (add-to-list 'exec-path "~/.elixir-ls")
+
+(after! alchemist
+  (map! :mode elixir-mode
+        :localleader
+        "," (kbd! "C-c a"))
+  )
