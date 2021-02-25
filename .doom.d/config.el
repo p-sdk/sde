@@ -65,10 +65,11 @@
         "s" 'org-save-all-org-buffers)
   )
 
-(add-to-list 'exec-path "~/.elixir-ls")
+(after! elixir-mode
+  (add-to-list 'exec-path "~/.elixir-ls")
 
-(after! alchemist
   (map! :mode elixir-mode
         :localleader
+        "f" 'elixir-format
         "," (kbd! "C-c a"))
   )
