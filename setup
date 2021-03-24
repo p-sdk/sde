@@ -52,7 +52,7 @@ fi
 
 if [ ! -d "$HOME/.elixir-ls" ]; then
   heading "Installing ElixirLS ..."
-  wget https://github.com/elixir-lsp/elixir-ls/releases/download/v0.6.2/elixir-ls-1.11.zip
+  wget https://github.com/elixir-lsp/elixir-ls/releases/download/v0.6.5/elixir-ls-1.11.zip
   unzip elixir-ls-1.11.zip -d ~/.elixir-ls
   rm elixir-ls-1.11.zip
 fi
