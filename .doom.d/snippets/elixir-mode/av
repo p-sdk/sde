@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: atom: var
+# key: av
+# --
+${1:key}: $1$0

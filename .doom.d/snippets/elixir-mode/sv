@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: "string" => var
+# key: sv
+# --
+"${1:key}" => $1$0
