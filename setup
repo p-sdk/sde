@@ -57,6 +57,12 @@ if [ ! -d "$HOME/.elixir-ls" ]; then
   rm elixir-ls-1.11.zip
 fi
 
+if ! mix local | grep -q credo; then
+  heading "Installing credo ..."
+  mix archive.install hex bunt --force
+  mix archive.install hex credo --force
+fi
+
 if ! mix local | grep -q phx.new; then
   heading "Installing phx_new ..."
   mix archive.install hex phx_new --force
