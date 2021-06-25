@@ -68,8 +68,16 @@
         "s" 'org-save-all-org-buffers)
   )
 
+(add-hook! 'lsp-after-initialize-hook
+  (run-hooks (intern (format "%s-lsp-hook" major-mode))))
+
 (after! elixir-mode
   (add-to-list 'exec-path "~/.elixir-ls")
+
+  (defun elixir-flycheck-setup ()
+    (flycheck-add-next-checker 'lsp 'elixir-credo))
+  (add-hook 'elixir-mode-lsp-hook
+            #'elixir-flycheck-setup)
 
   (map! :mode elixir-mode
         :localleader
