@@ -81,6 +81,5 @@
 
   (map! :mode elixir-mode
         :localleader
-        "f" 'elixir-format
         "," (kbd! "C-c a"))
   )
