@@ -25,7 +25,7 @@ sudo apt install -y postgresql libpq-dev
 
 heading "Installing Node.js ..."
 if [ ! -f "/etc/apt/sources.list.d/nodesource.list" ]; then
-  curl -sL https://deb.nodesource.com/setup_lts.x | sudo -E bash -
+  curl -fsSL https://deb.nodesource.com/setup_16.x | sudo -E bash -
 fi
 sudo apt install -y nodejs
 
