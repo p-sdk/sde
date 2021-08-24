@@ -37,6 +37,11 @@ if [ ! -f "/etc/apt/sources.list.d/yarn.list" ]; then
 fi
 sudo apt install -y yarn
 
+if [ ! -x "$(command -v prettier)" ]; then
+  heading "Installing prettier ..."
+  sudo npm -g install prettier
+fi
+
 heading "Installing Erlang and Elixir ..."
 if [ ! -f "/etc/apt/sources.list.d/erlang-solutions.list" ]; then
   wget https://packages.erlang-solutions.com/erlang-solutions_2.0_all.deb
