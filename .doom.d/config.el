@@ -79,6 +79,9 @@
   (add-hook 'elixir-mode-lsp-hook
             #'elixir-flycheck-setup)
 
+  (set-popup-rule! "^\\*alchemist" :size 0.3)
+  (set-popup-rule! "^\\*exunit" :size 0.3)
+
   (map! :mode elixir-mode
         :localleader
         "," (kbd! "C-c a"))
